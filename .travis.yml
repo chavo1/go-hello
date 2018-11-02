@@ -1,0 +1,4 @@
+language: go
+script:
+- bash -x build.sh
+- bash -x test.sh
