@@ -2,3 +2,12 @@ language: go
 script:
 - bash -x build.sh
 - bash -x test.sh
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: ZNNUez19oahU5U3/lTMfMV7cpBrKQfIhwhQxQmby9LBADx03LjVWyEZ2eO4D1dQvN2qemrrEbPoewLIzKK0zvNK4NdCYzWCjFKVxj6YRFraW62lnJsP37tokPqEPViFC3h7IfMDKdknYkEP7K8kYQg+AKXfmjvOuZ7QsZAjm/S3+spxL165E+KjdJll86Kq1BiDm0KvRUexNxX9YYTre4UFdJYH285YQuLmCUt32N2u4IhRlbYZ/Bpp2fnkEY2clOo0MI3jD/eYA5Ho8klDMhiHKCgSd/+v3TiEClHefrjZyRS5wVx/WhvRlY1YWr5512eNx7pIoXitJe/dVdiRzsQzIy9m48iHpirctkFdMJRuDugcOJnNXg9HcdbggVIQInll+9Y72kw/PMBcWC/lUuHQYZR3U1eHHAoMmjwouV6oZyAjNRHImiMWg2e5P4AWJ8wb96SZ24soatwXOnXo2hW+Lc8lHkVDA77Raw+oOw60D/+aF98TOUIN/3mOhj+e8WDMlBJMt7p/iBY4lb+FUsI6X9gMC1UXMH/oxUCbbT2NKgyi3wR8LtDVNjFrhfCoBqjpl3jxxO59XYqvttpu+6kk1A34+tujgoUeeJWSmgMIjpoLuJp+anclMKCGC2kzBHI8I6JpASVYWkGC2eZX0gsJo2BT2uu4oqi4LHPcTHgc=
+  file: hello
+  on:
+    repo: chavo1/go-hello
+    tags: true
