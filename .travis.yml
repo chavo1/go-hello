@@ -1,3 +1,4 @@
 language: go
 script:
-- bash -x exit 0
+- bash -x build.sh
+- bash -x test.sh
